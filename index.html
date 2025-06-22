@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Deepika ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #ff6b9d;
+            --secondary: #9d6bff;
+            --dark: #1a1a2e;
+            --darker: #16213e;
+            --text: #e6e6e6;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .distance {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: var(--primary);
+        }
+        
+        .heart {
+            color: var(--primary);
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* 🌟 NEW: Enhanced love message */
+        .love-message {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(26, 26, 46, 0.9);
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #ff9eb7;
+            box-shadow: 0 0 30px rgba(255, 107, 157, 0.6);
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+            z-index: 100;
+            overflow: hidden;
+        }
+        
+        .love-message:before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,107,157,0.2) 0%, rgba(255,107,157,0) 70%);
+            animation: pulse 4s infinite;
+            z-index: -1;
+        }
+        
+        .love-message.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 0.4; }
+            100% { transform: scale(0.8); opacity: 0.8; }
+        }
+        
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(2deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(-5px) rotate(-2deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .floating-hearts span {
+            position: absolute;
+            font-size: 1.2rem;
+            animation: heartFloat linear infinite;
+            opacity: 0;
+        }
+        
+        @keyframes heartFloat {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+        
+        .memory-section {
+            background-color: var(--darker);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-top: 0;
+        }
+        
+        .memory-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 1.2rem;
+            background-color: var(--darker);
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) infinite ease-in-out;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: var(--opacity); }
+            100% { opacity: 0; }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .love-message {
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <!-- 🌟 NEW: Floating hearts message -->
+    <div class="love-message" id="loveMessage">
+        I love you bachhaa 
+        <div class="floating-hearts" id="floatingHearts"></div>
+    </div>
+    
+    <header>
+        <div class="container">
+            <h1>Happy Birthday Deepika</h1>
+            <div class="distance">12,613 km apart but close at <span class="heart">❤️</span></div>
+            <p>Scarborough, Toronto ❤️ Nagpur, India</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="memory-section">
+            <h2>When We First Connected</h2>
+            <div class="memory-text">
+                <p>Remember how we first started talking? Those late-night conversations where hours felt like minutes. The way we discovered how much we had in common, how easily the words flowed between us. I knew from those first chats that you were someone special.</p>
+                <p>Our connection was instant - like we had known each other forever. Even through screens and distance, I could feel your warmth, your kindness, your beautiful spirit. You became my favorite part of every day.</p>
+            </div>
+        </div>
+        
+        <div class="memory-section">
+            <h2>Our Virtual Adventures</h2>
+            <div class="memory-text">
+                <p>Though we're miles apart, we've created our own world together. Movie nights where we hit play at the same time, video calls that last until sunrise, sharing songs that remind us of each other. These moments might seem small to others, but they're everything to me.</p>
+                <p>We may not walk the same streets yet, but we've watched the same sunsets, laughed at the same jokes, and built something real despite the distance. Every shared experience brings us closer.</p>
+            </div>
+        </div>
+        
+        <div class="memory-section">
+            <h2>Our Precious Memories</h2>
+            <div class="gallery">
+                <img src="deepika-harsh_1.jpg" alt="Our first video call">
+                <img src="deepika-harsh_2.jpg" alt="Song we both love">
+                <img src="deepika-harsh_3.jpg" alt="Sunset we both admired">
+                <img src="deepika-harsh_4.jpg" alt="Movie night together">
+                <img src="deepika-harsh_5.jpg" alt="Special message from you">
+                <img src="deepika-harsh_1.jpg" alt="Our future plans">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>No distance can diminish what I feel for you. Happy birthday to the woman who makes my world complete.</p>
+            <p class="signature">Forever yours, Harsh</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Create stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.width = `${Math.random() * 3 + 1}px`;
+            star.style.height = star.style.width;
+            star.style.setProperty('--opacity', Math.random());
+            star.style.setProperty('--duration', `${Math.random() * 5 + 3}s`);
+            star.style.animationDelay = `${Math.random() * 5}s`;
+            starsContainer.appendChild(star);
+        }
+        
+        // 🌟 NEW: Enhanced love message animation
+        setTimeout(() => {
+            const loveMsg = document.getElementById('loveMessage');
+            loveMsg.classList.add('visible');
+            
+            // Create floating hearts
+            const heartsContainer = document.getElementById('floatingHearts');
+            setInterval(() => {
+                const heart = document.createElement('span');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                heart.style.fontSize = (Math.random() * 10 + 10) + 'px';
+                heartsContainer.appendChild(heart);
+                
+                // Remove hearts after animation
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }, 300);
+            
+            // Gentle floating animation
+            setInterval(() => {
+                loveMsg.style.animation = 'floatUp 6s infinite';
+            }, 100);
+            
+        }, 2000); // Appears after 2 seconds
+    </script>
+</body>
+</html>
